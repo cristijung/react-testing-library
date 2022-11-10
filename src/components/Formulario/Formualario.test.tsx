@@ -69,6 +69,6 @@ test('adicionar um participante caso exista um nome preenchido', () => {
      fireEvent.click(botao)
 
      const mensagemDeErro = screen.getByRole('alert')
-    expect(mensagemDeErro.textContent).toBe('Nomes duplicados não são permitidos')
+     expect(mensagemDeErro.textContent).toBe('Nomes duplicados não são permitidos')
  })
 
