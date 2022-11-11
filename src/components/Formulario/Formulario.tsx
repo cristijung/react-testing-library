@@ -28,7 +28,7 @@ const Formulario = () => {
                 placeholder='Insira os nomes dos participantes' 
             />
             <button disabled={!nome}>Adicionar</button>
-            {mensagemDeErro && <p>{mensagemDeErro}</p>}
+            {mensagemDeErro && <p role='alert'>{mensagemDeErro}</p>}
         </form>
         </>
     )

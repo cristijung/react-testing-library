@@ -14,6 +14,9 @@ export const useAdicionarParticipante = () => {
     return (nomeDoParticipante: string) => { //criando a funcionalidade de duplicidade por meio de hooks personalizados + condicionais
         if (lista.includes(nomeDoParticipante)) {
             setErro('Nomes duplicados não são permitidos')
+            setTimeout(() => { //os erros vão ficar sendo exibidos somente por 3 segundos
+                setErro('')
+            }, 3000)
             return
         }
         return setLista(listaAtual => [...listaAtual, nomeDoParticipante])
